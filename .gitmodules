@@ -1,0 +1,3 @@
+[submodule "graph7/graph7"]
+	path = graph7/graph7
+	url = https://github.com/va-dudnikov/graph7
