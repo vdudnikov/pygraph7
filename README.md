@@ -18,6 +18,12 @@
 
 ## Установка
 
+Установка через pip.
+
+```bash
+pip install pygraph7
+```
+
 Установка через github.
 
 ```bash
