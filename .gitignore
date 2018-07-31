@@ -1,3 +1,4 @@
 build/*
 dist/*
 pygraph7.egg-info/*
+graph7/__pycache__/*
