@@ -15,6 +15,7 @@ ext_modules = [
 
 setup(
     name="pygraph7",
+    python_requires=">=3",
     version=graph7.__revision__,
     description="A simple format for storing different types of graphs in the ASCII-string",
     long_description=description,
