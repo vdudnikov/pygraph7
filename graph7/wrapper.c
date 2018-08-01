@@ -38,7 +38,7 @@ static PyObject* encode(PyObject *self, PyObject *args)
 
     PyObject *retval = NULL;
 
-    uint8_t *dst;
+    uint8_t *dst = NULL;
 
     int32_t err = 0;
 
@@ -91,14 +91,14 @@ static PyObject* decode(PyObject *self, PyObject *args)
     int32_t decoding_length;
 
     int32_t order;
-    uint8_t *dst;
+    uint8_t *dst = NULL;
 
     int32_t err = 0;
 
     if(!PyArg_ParseTuple(args, "y#", &src, &length))
         goto _exit;
 
-    decoding_length = graph7_metadata(src, length, &gtype, &width);
+    decoding_length = graph7_metadata((const uint8_t *)src, length, &gtype, &width);
 
     if(decoding_length < 0)
     {
@@ -115,7 +115,7 @@ static PyObject* decode(PyObject *self, PyObject *args)
         goto _exit;
     }
 
-    if((decoding_length = graph7_decode_to_matrix(dst, src, length)) < 0)
+    if((decoding_length = graph7_decode_to_matrix(dst, (const uint8_t *)src, length)) < 0)
     {
         err = decoding_length;
         goto _exit;
