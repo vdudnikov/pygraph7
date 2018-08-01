@@ -1,1 +1,6 @@
-include graph7/graph7/src/graph7.h
+recursive-include graph7 *.c *.h
+recursive-include examples *.py *.lst *.g7
+recursive-include tests *.py
+include *.txt
+include *.md
+include LICENSE
