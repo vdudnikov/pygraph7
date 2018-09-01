@@ -31,7 +31,7 @@ class TestGraph7(unittest.TestCase):
 
         def random_mat(order, wtype, min_int_val, max_int_val):
             mat = None
-            if wtype == g7.Wtype.Int:
+            if wtype == "int":
                 mat = [[random.randint(min_int_val, max_int_val) for _ in range(order)] for _ in range(order)]
             else:
                 mat = [[random.random() for _ in range(order)] for _ in range(order)]
@@ -55,12 +55,12 @@ class TestGraph7(unittest.TestCase):
                 self.assertEqual(g7.decode(g7.encode(mat4, wtype), wtype), mat4)
 
     def test_compact(self):
-        self._testing(MIN_ORDER, MAX_ORDER, g7.Wtype.Int, NITERS)
+        self._testing(MIN_ORDER, MAX_ORDER, "int", NITERS)
 
     def test_int(self):
-        self._testing(MIN_ORDER, MAX_ORDER, g7.Wtype.Int, NITERS, MIN_INT_VAL, MAX_INT_VAL)
+        self._testing(MIN_ORDER, MAX_ORDER, "int", NITERS, MIN_INT_VAL, MAX_INT_VAL)
 
     def test_float(self):
-        self._testing(MIN_ORDER, MAX_ORDER, g7.Wtype.Double, NITERS)
+        self._testing(MIN_ORDER, MAX_ORDER, "double", NITERS)
 
 unittest.main()

@@ -11,8 +11,8 @@ mat = None
 # Reading file with matrix in graph7 format
 # and decoding it.
 with open(base_path + "/dataset/mat.g7", "r") as file:
-    line = file.readline().replace("\n", "").replace("\r", "").encode("utf-8")
-    mat = g7.decode(line, g7.Wtype.Float)
+    line = file.readline().rstrip()
+    mat = g7.decode(line, "float")
 
 # Print type of graph
 print(g7.gtype(mat))

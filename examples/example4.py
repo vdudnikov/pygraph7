@@ -19,7 +19,7 @@ def edges_num(mat):
     return score
 
 with open(base_path + "/dataset/6.lst", "r") as file:
-    lines = [line.replace("\n", "").replace("\r", "").encode("utf-8") for line in file.readlines()]
+    lines = [line.rstrip() for line in file.readlines()]
 
     for line in lines:
-        print(edges_num(g7.decode(line, g7.Wtype.Int)))
+        print(edges_num(g7.decode(line)))

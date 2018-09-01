@@ -40,16 +40,28 @@ python setup.py install
 import graph7 as g7
 
 mat = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-encoded = g7.encode(mat, g7.Wtype.Int)
+
+encoded = g7.encode(mat) # Кодируем матрицу как int
 
 print(encoded)
+print(g7.decode(encoded) == mat)
 
-decoded = g7.decode(encoded, g7.Wtype.Int)
+encoded = g7.encode(mat, "float") # Кодируем матрицу как C-float
 
-print(decoded == mat)
+print(encoded)
+print(g7.decode(encoded, "float") == mat)
+
+encoded = g7.encode(mat, "double") # Кодируем матрицу как C-double
+
+print(encoded)
+print(g7.decode(encoded, "double") == mat)
 
 # Вывод
 # b'HAAQIDBAUGBwgJ'
+# True
+# b'HGAACAPwAAAEAAAEBAAACAQAAAoEAAAMBAAADgQAAAAEEAABBB'
+# True
+# b'HOAAAAAAAA8D8AAAAAAAAAQAAAAAAAAAhAAAAAAAAAEEAAAAAAAAAUQAAAAAAAABhAAAAAAAAAHEAAAAAAAAAgQAAAAAAAACJA'
 # True
 ```
 
