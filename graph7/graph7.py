@@ -1,16 +1,5 @@
 """
 graph7 module
-
-A simple example of usage:
-
->>> import graph7 as g7
->>> mat = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
->>> encoded = g7.encode(mat)
->>> print(encoded)
-b'HAAQIDBAUGBwgJ'
->>> decoded = g7.decode(encoded)
->>> print(mat == decoded)
-True
 """
 import _graph7
 from enum import Enum
