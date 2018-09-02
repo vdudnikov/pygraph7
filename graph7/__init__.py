@@ -13,11 +13,12 @@ b'HAAQIDBAUGBwgJ'
 True
 """
 
-try: from .graph7 import *
-except ImportError: pass
-
-__all__ = graph7.__all__
+try:
+    from .graph7 import *
+    from .graph7 import __all__
+except ImportError:
+    pass
 
 __author__     = "Vladik Dudnikov"
 __version__     = "0.0"
-__revision__    = "0.0.2a1"
+__revision__    = "0.0.2a2"
