@@ -18,7 +18,7 @@ def edges_num(mat):
 
     return score
 
-with open(base_path + "/dataset/6.lst", "r") as file:
+with open(base_path + '/dataset/6.lst', 'r') as file:
     lines = [line.rstrip() for line in file.readlines()]
 
     for line in lines:

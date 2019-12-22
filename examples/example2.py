@@ -20,8 +20,8 @@ mat2 = g7.encode(rand_mat)
 # Matrix contains float numbers
 # You can choose with what accuracy you need to store
 rand_mat = [[random.random() for _ in range(order)] for _ in range(order)]
-mat3 = g7.encode(rand_mat, "float")
-mat4 = g7.encode(rand_mat, "double")
+mat3 = g7.encode(rand_mat, 'float')
+mat4 = g7.encode(rand_mat, 'double')
 
 # Compare
 print(mat1)

@@ -10,9 +10,9 @@ mat = None
 
 # Reading file with matrix in graph7 format
 # and decoding it.
-with open(base_path + "/dataset/mat.g7", "r") as file:
+with open(base_path + '/dataset/mat.g7', 'r') as file:
     line = file.readline().rstrip()
-    mat = g7.decode(line, "float")
+    mat = g7.decode(line, 'float')
 
 # Print type of graph
 print(g7.gtype(mat))
@@ -23,4 +23,4 @@ try:
     np_mat = np.matrix(mat)
     # Do anything...
 except ImportError:
-    print("Needed NumPy")
+    print('Needed NumPy')

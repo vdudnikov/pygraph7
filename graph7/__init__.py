@@ -1,4 +1,4 @@
-"""
+'''
 graph7
 
 A simple example of usage:
@@ -11,7 +11,7 @@ b'HAAQIDBAUGBwgJ'
 >>> decoded = g7.decode(encoded)
 >>> print(mat == decoded)
 True
-"""
+'''
 
 try:
     from .graph7 import *
@@ -19,6 +19,6 @@ try:
 except ImportError:
     pass
 
-__author__     = "Vladik Dudnikov"
-__version__     = "0.0"
-__revision__    = "0.0.2a2"
+__author__     = 'Vladik Dudnikov'
+__version__     = '0.0'
+__revision__    = '0.0.2a2'
